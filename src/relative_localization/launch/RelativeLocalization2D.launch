@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+   <arg name="distance_sensor_range_"   default="0.28"/>
+   <arg name="para_alpha_"              default="10"/>
+   <arg name="target_height_"              default="1.6"/>
+   <arg name="use_pos_"              default="false"/>
+   <arg name="use_vel_"              default="true"/>
+
+       <node name="RelativeLocalization2D" pkg="relative_localization" type="RelativeLocalization2D" output="screen">
+           <param name="distance_sensor_range" value="$(arg distance_sensor_range_)"/> 
+           <param name="para_alpha"            value="$(arg para_alpha_)"/>  
+           <param name="target_height"            value="$(arg target_height_)"/> 
+           <param name="use_pos"            value="$(arg use_pos_)"/> 
+           <param name="use_vel"            value="$(arg use_vel_)"/> 
+       </node>
+
+</launch>
+

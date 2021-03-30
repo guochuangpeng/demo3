@@ -1,0 +1,12 @@
+Header header
+bool success
+float32 x_pos_relative
+float32 y_pos_relative
+float32 z_pos_relative
+float32 z_pos
+float32 lidar_value
+float32 uwb_distance_2dimension
+float32 uwb_distance_3dimension
+float32 sigma1
+float32 sigma2
+float32 sigma3

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+   <arg name="distance_sensor_range_"   default="0.28"/>
+   <arg name="para_Gamma_"              default="10"/>
+   <arg name="use_pos_"              default="true"/>
+   <arg name="use_vel_"              default="false"/>
+
+       <node name="RelativeLocalization3D" pkg="relative_localization" type="RelativeLocalization3D" output="screen">
+           <param name="distance_sensor_range" value="$(arg distance_sensor_range_)"/>
+           <param name="para_Gamma"            value="$(arg para_Gamma_)"/>  
+           <param name="use_pos"            value="$(arg use_pos_)"/> 
+           <param name="use_vel"            value="$(arg use_vel_)"/> 
+       </node>
+
+</launch>
+

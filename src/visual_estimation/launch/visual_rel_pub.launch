@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="target_height_"   default="0.0"/>
+        <node name="visual_esti" pkg="visual_estimation" type="visual_esti" output="screen">
+           <param name="target_height" value="$(arg target_height_)"/>
+        </node>
+</launch>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+   <arg name="u_max_"          default="0.75"/>
+   <arg name="para_beta_"      default="5.0"/>  
+   <arg name="para_alpha_"         default="1.0"/> 
+   <arg name="highest_height_" default="3.0"/>
+   <arg name="visual_enable_" default="false"/>
+   <arg name="d_safe_" default="2.0"/>
+   <!--arg name="set_height_" default="2.28"/-->
+    <node pkg="movement" type="uav_movement3D" name="uav_movement3D" output="screen">
+        <param name="u_max"          value="$(arg u_max_)"/>
+        <param name="para_beta"      value="$(arg para_beta_)"/>
+        <param name="para_alpha"         value="$(arg para_alpha_)"/>
+        <param name="highest_height" value="$(arg highest_height_)"/>
+        <param name="visual_enable" value="$(arg visual_enable_)"/>
+        <param name="d_safe" value="$(arg d_safe_)"/>
+        <!--param name="set_height" value="$(arg set_height_)"/-->
+    </node>
+</launch>
